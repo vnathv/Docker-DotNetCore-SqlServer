@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Employee.DataAccessLayer
@@ -6,8 +7,7 @@ namespace Employee.DataAccessLayer
     public class Employee
     {
         [Key]
-        [DatabaseGenerat‌ed(DatabaseGeneratedOp‌​tion.Identity)]
-        public int Id { get; set; }
+        public string Id { get; } = Guid.NewGuid().ToString();
 
         public string FirstName { get; set; }
 

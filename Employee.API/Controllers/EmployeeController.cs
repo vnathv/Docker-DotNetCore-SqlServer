@@ -1,5 +1,6 @@
 ﻿using Employee.Provider.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,7 +24,7 @@ namespace Employee.API.Controllers
         }
 
         [HttpGet("{employeeId}")]
-        public ActionResult<DataAccessLayer.Employee> GetEmployee(int employeeId)
+        public ActionResult<DataAccessLayer.Employee> GetEmployee(string employeeId)
         {
             return employeeProvider.GetEmployee(employeeId);
         }

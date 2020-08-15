@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Employee.DataAccessLayer.DBContexts
 {
@@ -13,6 +14,12 @@ namespace Employee.DataAccessLayer.DBContexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // seed the database with dummy data
+
+            
+            modelBuilder.Entity<Employee>().HasKey(e => new { e.Id });
+
+            Console.WriteLine("Seeding data to Employee table");
+
             modelBuilder.Entity<Employee>().HasData(
                 new Employee
                 {

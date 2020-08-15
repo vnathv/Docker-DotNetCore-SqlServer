@@ -1,8 +1,6 @@
 ﻿using Employee.DataAccessLayer.Repositories;
 using Employee.Provider.Contracts;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Employee.Provider
 {
@@ -19,14 +17,14 @@ namespace Employee.Provider
             employeeRepository.AddEmployee(employee);
         }
 
-        public DataAccessLayer.Employee GetEmployee(int employeeId)
+        public DataAccessLayer.Employee GetEmployee(string employeeId)
         {
-            throw new NotImplementedException();
+            return employeeRepository.GetEmployee(employeeId);
         }
 
         public IEnumerable<DataAccessLayer.Employee> GetEmployees()
         {
-            throw new NotImplementedException();
+            return employeeRepository.GetEmployees();
         }
     }
 }

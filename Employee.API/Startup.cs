@@ -1,5 +1,7 @@
 using Employee.DataAccessLayer.DBContexts;
 using Employee.DataAccessLayer.Repositories;
+using Employee.Provider;
+using Employee.Provider.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -23,19 +25,22 @@ namespace Employee.API
         public void ConfigureServices(IServiceCollection services)
         {
            services.AddControllers();
-             
+
+            services.AddScoped<IEmployeeProvider, EmployeeProvider>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             services.AddDbContext<EmployeeContext>(options =>
             {
-                var server = "codewithvijay1";
+                //PLEASE NEVER EVER EXPOSE CREDENTIALS IN PRODUCTION CODE. THIS IS JUST A SAMPLE TO DEMO
+                var server = "SERVERNAME";
                 var port = "1433";
                 var database = "Employee";
-                var user = "SA";
-                var password = "TestP@ssw0rd";
+                var user = "USER";
+                var password = "PASSWORD";
 
                 options.UseSqlServer(
-                    $"Server={server},{port};Initial Catalog={database};User ID={user};Password={password}", b => b.MigrationsAssembly("Employee.API"));
+                    $"Server={server},{port};Initial Catalog={database};User ID={user};Password={password}",
+                    sqlServer => sqlServer.MigrationsAssembly("Employee.API"));
             }); 
         }
 

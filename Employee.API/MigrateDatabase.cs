@@ -16,7 +16,7 @@ namespace Employee.API
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var db = services.GetRequiredService<T>();
+                    var db = services.GetService<T>();
                     db.Database.Migrate();
                 }
                 catch (Exception ex)

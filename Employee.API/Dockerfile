@@ -7,7 +7,7 @@ COPY *csproj .
 RUN dotnet restore
 
 COPY . .
-RUN dotnet publish -c Release -0 pub
+RUN dotnet publish -c Release -o pub
 
 #Run phase
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1

@@ -13,10 +13,5 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Employee.DataAccessLayer\Employee.DataAccessLayer.csproj" />
-    <ProjectReference Include="..\Employee.Provider\Employee.Provider.csproj" />
-  </ItemGroup>
-
 
 </Project>

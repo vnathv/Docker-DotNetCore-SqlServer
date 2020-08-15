@@ -19,7 +19,7 @@ namespace Employee.DataAccessLayer.Repositories
             return _context.Employees;
         }
 
-        public Employee GetEmployee(int employeeId)
+        public Employee GetEmployee(string employeeId)
         {
             return _context.Employees.SingleOrDefault(a => a.Id == employeeId);
         }

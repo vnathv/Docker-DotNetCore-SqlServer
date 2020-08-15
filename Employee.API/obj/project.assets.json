@@ -4957,23 +4957,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vviswanathan\\.nuget\\packages\\": {},
+    "C:\\Users\\vijay\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Personal\\NetCoreAPI\\CourseLibrary - Copy\\Employee\\Employee.API\\Employee.API.csproj",
+      "projectUniqueName": "C:\\Docker\\Docker-DotNetCore-SqlServer\\Employee.API\\Employee.API.csproj",
       "projectName": "Employee.API",
-      "projectPath": "C:\\Personal\\NetCoreAPI\\CourseLibrary - Copy\\Employee\\Employee.API\\Employee.API.csproj",
-      "packagesPath": "C:\\Users\\vviswanathan\\.nuget\\packages\\",
-      "outputPath": "C:\\Personal\\NetCoreAPI\\CourseLibrary - Copy\\Employee\\Employee.API\\obj\\",
+      "projectPath": "C:\\Docker\\Docker-DotNetCore-SqlServer\\Employee.API\\Employee.API.csproj",
+      "packagesPath": "C:\\Users\\vijay\\.nuget\\packages\\",
+      "outputPath": "C:\\Docker\\Docker-DotNetCore-SqlServer\\Employee.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\vviswanathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vijay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4982,7 +4982,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://itesso.pkgs.visualstudio.com/_packaging/ACPMS-NugetFeed/nuget/v3/index.json": {}
+        "https://pkgs.dev.azure.com/TaasAcademy/_packaging/TaaSAcademy/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -5031,7 +5031,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
