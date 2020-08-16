@@ -16,5 +16,4 @@ WORKDIR /app
 EXPOSE 80
 COPY --from=build /app/pub .
 
-ENTRYPOINT [ "dotnet", "Employee.API.dll" ]
-
+ENTRYPOINT [ "dotnet","Employee.API.dll" ]

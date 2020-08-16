@@ -1,3 +1,4 @@
+using System;
 using Employee.DataAccessLayer.DBContexts;
 using Employee.DataAccessLayer.Repositories;
 using Employee.Provider;
@@ -30,13 +31,12 @@ namespace Employee.API
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             services.AddDbContext<EmployeeContext>(options =>
-            {
-                //PLEASE NEVER EVER EXPOSE CREDENTIALS IN PRODUCTION CODE. THIS IS JUST A SAMPLE TO DEMO
-                var server = "SERVERNAME";
+            {              
+                var server = Configuration["ServerName"];
                 var port = "1433";
-                var database = "Employee";
-                var user = "USER";
-                var password = "PASSWORD";
+                var database = Configuration["Database"];
+                var user = Configuration["UserName"];
+                var password = Configuration["Password"];
 
                 options.UseSqlServer(
                     $"Server={server},{port};Initial Catalog={database};User ID={user};Password={password}",
